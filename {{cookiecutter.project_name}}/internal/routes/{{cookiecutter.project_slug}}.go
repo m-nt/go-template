@@ -3,7 +3,7 @@ package routes
 import (
 	"log"
 
-	"github.com/atlasgames-sites/backend/internal/handlers"
+	"github.com/{{cookiecutter.project_github}}/{{cookiecutter.project_name}}/internal/handlers"
 	"github.com/gin-gonic/gin"
 )
 

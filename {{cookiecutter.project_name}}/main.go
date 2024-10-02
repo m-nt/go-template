@@ -4,14 +4,14 @@ import (
 	"log"
 	"time"
 
-	"github.com/atlasgames-sites/backend/docs"
-	"github.com/atlasgames-sites/backend/internal"
-	"github.com/atlasgames-sites/backend/internal/middlewares"
-	"github.com/atlasgames-sites/backend/internal/routes"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	swaggerfiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
+	"github.com/{{cookiecutter.project_github}}/{{cookiecutter.project_name}}/docs"
+	"github.com/{{cookiecutter.project_github}}/{{cookiecutter.project_name}}/internal"
+	"github.com/{{cookiecutter.project_github}}/{{cookiecutter.project_name}}/internal/middlewares"
+	"github.com/{{cookiecutter.project_github}}/{{cookiecutter.project_name}}/internal/routes"
 )
 
 // @BasePath /

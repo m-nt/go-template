@@ -1,8 +1,8 @@
 package middlewares
 
 import (
-	"github.com/atlasgames-sites/backend/internal"
-	"github.com/atlasgames-sites/backend/internal/handlers"
+	"github.com/{{cookiecutter.project_github}}/{{cookiecutter.project_name}}/internal"
+	"github.com/{{cookiecutter.project_github}}/{{cookiecutter.project_name}}/internal/handlers"
 	"github.com/gin-gonic/gin"
 )
 
