@@ -9,5 +9,7 @@
     "version": "0.1.0",
     "go_version": "1.22.3",
     "gin_version": "1.10.0",
-    "pgx_version": "5.7.1"
+    "pgx_version": "5.7.1",
+    "postgres_user": "root",
+    "postgres_pass": "changeme"
 }

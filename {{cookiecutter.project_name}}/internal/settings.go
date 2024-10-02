@@ -8,7 +8,7 @@ import (
 )
 
 type Settings struct {
-	DATABASE_URL    string `default:"postgres://root:1234@localhost:5432/root"`
+	DATABASE_URL    string `default:"postgres://root:12345@localhost:5432/root"`
 	SERVICE_ADDRESS string `default:":3000"`
 }
 

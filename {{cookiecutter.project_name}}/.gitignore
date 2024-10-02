@@ -9,7 +9,6 @@
 *.dylib
 build.log
 .vscode
-*.env
 
 # Test binary, built with `go test -c`
 *.test
