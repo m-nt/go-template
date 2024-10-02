@@ -1,0 +1,12 @@
+{
+    "author": "mohamad nosratian",
+    "email": "<68176509+m-nt@users.noreply.github.com>",
+    "resource_name": "resource",
+    "project_name": "{{cookiecutter.resource_name}}-service",
+    "project_slug": "{{cookiecutter.project_name.lower().replace(' ', '_').replace('-','_')}}",
+    "project_description": "A golang API service template with gin and pgx",
+    "version": "0.1.0",
+    "go_version": "1.22.3",
+    "gin_version": "1.10.0",
+    "pgx_version": "5.7.1"
+}

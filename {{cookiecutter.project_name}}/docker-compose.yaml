@@ -1,0 +1,75 @@
+services:
+  api:
+    container_name: {{ cookiecutter.project_slug }}-api
+    image: {{ cookiecutter.project_slug }}go
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - {{ cookiecutter.project_slug }}
+    deploy:
+      mode: replicated
+      replicas: 1
+      resources:
+        limits:
+          cpus: '0.2'
+          memory: '100M'
+      restart_policy:
+        condition: unless-stopped
+        delay: 5s
+        window: 120s
+    env_file:
+      - .env
+  postgres:
+    container_name: {{ cookiecutter.project_slug }}-postgres
+    image: postgres
+    env_file:
+      - .env
+    volumes:
+       - postgres:/data/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - {{ cookiecutter.project_slug }}
+    deploy:
+      mode: replicated
+      replicas: 1
+      resources:
+        limits:
+          cpus: '1'
+          memory: '500M'
+      restart_policy:
+        condition: unless-stopped
+        delay: 5s
+        window: 120s
+  pgadmin:
+    container_name: {{ cookiecutter.project_slug }}-pgadmin
+    image: dpage/pgadmin4
+    env_file:
+      - .env
+    volumes:
+       - pgadmin:/var/lib/pgadmin
+    ports:
+      - "${PGADMIN_PORT:-5050}:80"
+    networks:
+      - {{ cookiecutter.project_slug }}
+    deploy:
+      mode: replicated
+      replicas: 1
+      resources:
+        limits:
+          cpus: '1'
+          memory: '500M'
+      restart_policy:
+        condition: any
+        delay: 5s
+        window: 120s
+
+networks:
+  {{ cookiecutter.project_slug }}:
+
+volumes:
+    postgres:
+    pgadmin:

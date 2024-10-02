@@ -1,0 +1,33 @@
+basePath: /
+info:
+  contact: {}
+paths:
+  /liveness:
+    get:
+      consumes:
+      - application/json
+      description: liveness
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      tags:
+      - liveness
+  /v1/{{cookiecutter.project_slug}}:
+    get:
+      consumes:
+      - application/json
+      description: get {{cookiecutter.project_slug}}
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      tags:
+      - {{cookiecutter.project_slug}}_v1
+swagger: "2.0"
