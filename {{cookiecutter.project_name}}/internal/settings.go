@@ -8,11 +8,8 @@ import (
 )
 
 type Settings struct {
-	DATABASE_URL      string `default:"postgres://localhost"`
-	POSTGRES_USER     string `default:"postgres"`
-	POSTGRES_PASSWORD string `default:"changeme"`
-	PMA_PORT          string `default:"5432"`
-	SERVICE_ADDRESS   string `default:":3000"`
+	DATABASE_URL    string `default:"postgres://root:1234@localhost:5432/root"`
+	SERVICE_ADDRESS string `default:":3000"`
 }
 
 func load_Env(settings interface{}) {
