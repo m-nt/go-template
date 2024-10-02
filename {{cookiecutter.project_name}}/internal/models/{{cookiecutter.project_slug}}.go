@@ -1,6 +1,6 @@
 package models
 
-type {{cookiecutter.project_slug.title()}} struct {
+type {{cookiecutter.project_name.title()}} struct {
 	id   string
 	name string
 }
